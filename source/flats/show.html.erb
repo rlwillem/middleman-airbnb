@@ -1,15 +1,54 @@
 <!-- Access data.flats with owner's name as key -->
 <% flat = data.flats[owner] %>
 <!-- Inject flat data in template -->
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('../images/<%=flat.city_slug %>.jpg');">
-  <%= image_tag "#{flat.city_slug}.jpg" %>
+<div class="banner banner-show" style="background-image:  url('../images/<%=flat.city_slug %>.jpg');">
 </div>
-<div></div>
-<%= image_tag "#{owner}.jpeg", class: "img-circle" %>
-<p>
-  <%= flat.name %>
-</p>
-<h1><%= flat.description %></h1>
-<p>
-  <%= flat.city_name %>
-</p>
+<div class="show-wrapper">
+  <div class="show-container">
+    <div class="show-avatar-name">
+      <%= image_tag "#{owner}.jpeg", class: "show-avatar" %>
+      <p>
+        <%=owner %>
+      </p>
+    </div>
+    <div>
+      <h1><%= flat.description %></h1>
+      <p>
+        <%= flat.city_name %>
+      </p>
+      <p class="rating">
+        <% flat.rating.times do  %>
+        <i class="fa fa-star" style="color: #ffb400"></i>
+        <%end %>
+        <% (5 - flat.rating).times do %>
+        <i class="fa fa-star" style="color: #cacccd"></i>
+        <%end %>
+      </p>
+    </div>
+    <div>
+      <div class="col-xs-6 col-md-12">
+        <form action="#">
+          <h4>Book this flat</h4>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkin" id="checkin">
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkout">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <select name="" id="guests" class="form-control">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

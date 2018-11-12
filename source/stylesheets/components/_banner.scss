@@ -1,7 +1,7 @@
 .banner {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -23,4 +23,7 @@
   margin-bottom: 30px;
 }
 
-.banner-show {}
+.banner-show {
+  height: 50vh;
+  background-position: center;
+}
