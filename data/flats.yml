@@ -1,7 +1,7 @@
 # data/flats.yml
 josh:
   name: "Josh's crib"
-  description: "unique house in Kumasi"
+  description: "Unique villa in Kumasi"
   city_name: "Kumasi, Ghana"
   city_slug: "kumasi"
   wifi: false
@@ -15,7 +15,7 @@ francis:
   rating: 5
 willem:
   name: Willem's humble castle
-  description: a very modest castle in France
+  description: Modest castle in France
   city_name: "Versailles, France"
   city_slug: "versailles"
   wifi: true
