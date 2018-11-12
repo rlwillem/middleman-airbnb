@@ -1,0 +1,22 @@
+# data/flats.yml
+josh:
+  name: "Josh's crib"
+  description: "unique house in Kumasi"
+  city_name: "Kumasi, Ghana"
+  city_slug: "kumasi"
+  wifi: false
+  rating: 4
+francis:
+  name: "Franciz' fratparty house"
+  description: Penthouse in Kyoto
+  city_name: "Kyoto, Japan"
+  city_slug: "kyoto"
+  wifi: true
+  rating: 5
+willem:
+  name: Willem's humble castle
+  description: a very modest castle in France
+  city_name: "Versailles, France"
+  city_slug: "versailles"
+  wifi: true
+  rating: 5
