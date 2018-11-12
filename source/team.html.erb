@@ -1,0 +1,12 @@
+<div class="teamcard-wrapper">
+  <h2> The Team</h3>
+  <div class="teamcard-container">
+
+    <% ["sumita", "willem"].each do |name| %>
+    <div class="teamcard-user">
+      <%= image_tag "#{name}.jpg", class: "teamcard-avatar" %>
+      <h3><%= name.capitalize %></h3>
+    </div>
+    <% end %>
+  </div>
+</div>
